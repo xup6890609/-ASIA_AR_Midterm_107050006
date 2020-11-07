@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/ASIA_AR_Midterm_107050006.unity
+    guid: 5fd637e51bc7b9a4aac44c9ce2910ebd
   m_configObjects: {}
