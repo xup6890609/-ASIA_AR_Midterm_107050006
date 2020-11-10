@@ -37,7 +37,9 @@ public class GameManager : MonoBehaviour
   White.Rotate(0, Joystick.Horizontal*turn, 0);
 
   Black.localScale += new Vector3(1, 1, 1) * Joystick.Vertical * size;
+  Black.localScale = new Vector3(1, 1, 1) * Mathf.Clamp(Black.localScale.x, 1f, 5f);
   White.localScale += new Vector3(1, 1, 1) * Joystick.Vertical * size;
+  White.localScale = new Vector3(1, 1, 1) * Mathf.Clamp(White.localScale.x, 1f, 5f);
     }
 
 }
