@@ -18,8 +18,13 @@ public class GameManager : MonoBehaviour
  [Header("縮放"), Range(1f, 5f)]
  public float size = 1f;
 
+    [Header("小黑動畫元件")]
+    public Animator aniBlack;
 
- private void Start()
+    [Header("小白動畫元件")]
+    public Animator aniWhite;
+
+    private void Start()
  {
   print("開始執行中...");
  }
@@ -27,8 +32,10 @@ public class GameManager : MonoBehaviour
  {
   print("更新");
   print(Joystick.Vertical);
+
   Black.Rotate(0,Joystick.Horizontal*turn,0);
   White.Rotate(0, Joystick.Horizontal*turn, 0);
+
   Black.localScale += new Vector3(1, 1, 1) * Joystick.Vertical * size;
   White.localScale += new Vector3(1, 1, 1) * Joystick.Vertical * size;
     }
